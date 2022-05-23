@@ -1,0 +1,19 @@
+.App-body {
+  margin-top: 25px;
+  align-items: center;
+  justify-content: center;
+  width: 96%;
+  margin-left: 2%;
+}
+
+.InputGroupText-departure {
+  width: 105px;
+}
+
+.InputGroupText-current {
+  width: 160px;
+}
+
+.InputGroupText-pcr {
+  width: 160px;
+}
