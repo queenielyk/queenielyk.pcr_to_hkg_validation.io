@@ -1,5 +1,6 @@
 {
   "name": "pcr-to-hkg-validation-app",
+  "homepage": "https://queenielyk.github.io/queenielyk.pcr_to_hkg_validation.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
