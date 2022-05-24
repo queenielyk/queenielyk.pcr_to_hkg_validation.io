@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/queenielyk.pcr_to_hkg_validation.io/static/css/main.f742dc89.css",
+    "main.js": "/queenielyk.pcr_to_hkg_validation.io/static/js/main.4c19e9b9.js",
+    "static/js/787.987f308d.chunk.js": "/queenielyk.pcr_to_hkg_validation.io/static/js/787.987f308d.chunk.js",
+    "index.html": "/queenielyk.pcr_to_hkg_validation.io/index.html",
+    "main.f742dc89.css.map": "/queenielyk.pcr_to_hkg_validation.io/static/css/main.f742dc89.css.map",
+    "main.4c19e9b9.js.map": "/queenielyk.pcr_to_hkg_validation.io/static/js/main.4c19e9b9.js.map",
+    "787.987f308d.chunk.js.map": "/queenielyk.pcr_to_hkg_validation.io/static/js/787.987f308d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f742dc89.css",
+    "static/js/main.4c19e9b9.js"
+  ]
+}
