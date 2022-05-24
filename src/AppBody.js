@@ -2,10 +2,12 @@ import React from 'react';
 import './AppBody.css';
 import { Form, Input, Row, Col, InputGroup, InputGroupText } from 'reactstrap';
 import { Timezone } from './Timezone'
+import moment from 'moment-timezone';
 
 const initState = {
-  departure: new Date().toISOString().slice(0, -8),
-
+  departure: "",
+  departZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+  currentZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
 }
 
 class AppBody extends React.Component {
@@ -21,7 +23,13 @@ class AppBody extends React.Component {
   }
 
   subtractHours() {
-    console.log(new Date(this.state.arrival).getTime(), new Date({ time: this.state.waitingtime }))
+    if (this.state.departure !== "") {
+      let departure = new Date(moment.tz(this.state.departure, this.state.departZone).format())
+      departure.setHours(departure.getHours() - 48)
+
+      let pcrTakenTime = moment.utc(departure.toISOString().slice(0, -1)).tz(this.state.currentZone)
+      return pcrTakenTime.format().substring(0, 16)
+    }
   }
 
   render() {
@@ -37,7 +45,25 @@ class AppBody extends React.Component {
               src="https://www.google.com/maps/d/embed?mid=1oSh9Ryw6YVFOK8WOxzFa2h1onjLUreFo&hl=en&ehbc=2E312F" />
           </Col>
 
-          <Col></Col>
+          <Col>
+            <div>
+              <h2>Guide</h2>
+              <ol type="1">
+                <li>Input the take off time of the last flight heading to Hong Kong and select the timezone of that city</li>
+                <li>Select the timezone where you are being now</li>
+                <li>Take the PCR Test no eariler than the time given in red color. That time has been converted to your local timezone</li>
+              </ol>
+            </div>
+
+            <div>
+              <h2>使用說明</h2>
+              <ol type="1">
+                <li>輸入最後飛往香港的航班起飛時間, 並選擇當地時區</li>
+                <li>選擇你所在地的時區</li>
+                <li>留意PCR採檢時間不可早過紅色標註的時間. 該時間已轉換成你選擇的所在地時區</li>
+              </ol>
+            </div>
+          </Col>
 
           <Col>
             <Form>
@@ -54,10 +80,10 @@ class AppBody extends React.Component {
               <InputGroup>
                 <InputGroupText className='InputGroupText-departure'>TimeZone</InputGroupText>
                 <Input
-                  id="depart_zone"
-                  name="depart_zone"
+                  id="departZone"
+                  name="departZone"
                   type="select"
-                  value={this.state.depart_zone}
+                  value={this.state.departZone}
                   onChange={this.handleChange}
                 >
                   {Timezone.map((zone, index) => (
@@ -71,10 +97,10 @@ class AppBody extends React.Component {
               <InputGroup>
                 <InputGroupText className='InputGroupText-current'>Current Timezone</InputGroupText>
                 <Input
-                  id="current_zone"
-                  name="current_zone"
+                  id="currentZone"
+                  name="currentZone"
                   type="select"
-                  value={this.state.current_zone}
+                  value={this.state.currentZone}
                   onChange={this.handleChange}
                 >
                   {Timezone.map((zone, index) => (
@@ -82,14 +108,15 @@ class AppBody extends React.Component {
                   ))}
                 </Input>
               </InputGroup>
+
               <InputGroup>
-                <InputGroupText className='InputGroupText-pcr'>PCR Taken</InputGroupText>
+                <InputGroupText className='InputGroupText-pcr'>PCR Test Taken</InputGroupText>
                 <Input
                   disabled
                   id="pcrTaken"
                   name="pcrTaken"
                   type="datetime-local"
-                  value={this.state.departure}
+                  value={this.subtractHours()}
                   style={{ color: 'red' }} />
               </InputGroup>
 
