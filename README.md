@@ -1,70 +1,13 @@
-# Getting Started with Create React App
+# Take PCR to Hong Kong
+People going to Hong Kong under Covid-19 should prepare a negative PCR report and an ISO15189 certificate within 48hours before the last flight take off. In this case, the time difference should be taken into account.
+Some people were unable to onboard because of the expired PCR report. As a result, finding a verified PCR lab and counting the execution time is laborious.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Where and When taking the PCR test?
+This site provides an embedded map and a calculator for people to check where they can take a verified PCR test nearby and when they should take the PCR test prior to the take-off of the last leg to Hong Kong.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## How to maintain to Google Map?
+If you arrived Hong Kong successfully, please do not hesitate to update this map. We need your experience to enrich this map and help more people who are in need. <br/>
+Simply login to your Google account and go to this link:
+https://www.google.com/maps/d/edit?mid=1oSh9Ryw6YVFOK8WOxzFa2h1onjLUreFo&fbclid=IwAR3jz_AQ4FWhoFiyqc8qyyGOdWd1RTZ-Q6c-21-NTQP-W_mDF6jpgln4POk&ll=26.11506611897147%2C121.44761329629893&z=7
